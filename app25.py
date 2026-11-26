@@ -52,7 +52,8 @@ else:
     st.write("Няма налични книги.")
 st.session_state.books.remove(selected_book)        
 st.success("Книгата е изтрита!")        
-st.rerun()else:    
+st.rerun()
+else:   
 st.info("Библиотеката е празна!")
 st.subheader(" Сортиране")
 if st.button("Сортирай по азбучен ред"):    
