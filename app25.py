@@ -45,16 +45,17 @@ if st.session_state.books:
         st.session_state.books
     )
 
+   if st.session_state.books:
+    selected_book = st.selectbox(
+        "Изберете книга:",
+        st.session_state.books
+    )
+
     if st.button("Изтрий"):
         st.session_state.books.remove(selected_book)
         st.rerun()
 else:
     st.write("Няма налични книги.")
-st.session_state.books.remove(selected_book)        
-st.success("Книгата е изтрита!")        
-st.rerun()
-else:   
-st.info("Библиотеката е празна!")
 st.subheader(" Сортиране")
 if st.button("Сортирай по азбучен ред"):    
 st.session_state.books.sort()    
